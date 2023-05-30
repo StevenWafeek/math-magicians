@@ -1,10 +1,11 @@
 import React from 'react';
 import './Calculator.css';
+import Display from './chiled';
 
 function Calculator() {
   return (
     <div className="calculator">
-      <div className="display">0</div>
+      <Display value="0" />
       <div className="buttons">
         <div className="row">
           <button type="button" className="button">AC</button>
