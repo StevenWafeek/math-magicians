@@ -132,7 +132,7 @@ Deployed by GitHub Pages.
 
 ## 🔭 Future milestone <a name="future-features"></a>
 
-- make functionalty if culculations.
+- make functionalty for culculations.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
