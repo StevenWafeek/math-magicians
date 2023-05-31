@@ -7,24 +7,30 @@ export default function QuoteComponent() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    setLoading(true);
-    const category = 'happiness';
-    const apiKey = 'ymCbBE03nErvlKzbVx1/bQ==cOiHM9eT0XjlnLNn';
+    const fetchData = async () => {
+      setLoading(true);
+      const category = 'happiness';
+      const apiKey = 'ymCbBE03nErvlKzbVx1/bQ==cOiHM9eT0XjlnLNn';
 
-    fetch(`https://api.api-ninjas.com/v1/quotes?category=${category}`, {
-      headers: {
-        'X-Api-Key': apiKey,
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
+      try {
+        const response = await fetch(
+          `https://api.api-ninjas.com/v1/quotes?category=${category}`,
+          {
+            headers: {
+              'X-Api-Key': apiKey,
+            },
+          },
+        );
+        const data = await response.json();
         setQuote(data[0]);
-        setLoading(false);
-      })
-      .catch((error) => {
+      } catch (error) {
         setError(error);
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+
+    fetchData();
   }, []);
 
   if (loading) {
