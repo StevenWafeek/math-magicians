@@ -3,7 +3,7 @@ import QuoteComponent from '../QuoteComponent/quote';
 
 function Quote() {
   return (
-    <div>
+    <div className="quotePage">
       <QuoteComponent />
     </div>
   );
