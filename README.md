@@ -126,6 +126,10 @@ Deployed by GitHub Pages.
 - LinkedIn: [steven wafeek
   ](https://www.linkedin.com/in/steven-wafeek-b629341b6/)
 
+👤 **Gerson Higgins**
+
+- GitHub: [Gerson Higgins](https://github.com/gersonhiggins)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->

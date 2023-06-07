@@ -19,7 +19,7 @@ function Calculator() {
       <Display value={calculatorData.next || calculatorData.total || '0'} />
       <div className="buttons">
         <div className="row">
-          <button type="button" className="button" onClick={() => handleClick('AC')}>AC</button>
+          <button type="button" className="button AC" onClick={() => handleClick('AC')}>AC</button>
           <button type="button" className="button" onClick={() => handleClick('+/-')}>+/-</button>
           <button type="button" className="button" onClick={() => handleClick('%')}>%</button>
           <button type="button" className="button-operator" onClick={() => handleClick('÷')}>÷</button>
