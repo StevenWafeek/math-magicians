@@ -1,13 +1,13 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import  { render } from '@testing-library/react';
 import Calculator from './Calculator';
 import '@testing-library/jest-dom/extend-expect';
+import { prettyDOM } from '@testing-library/dom';
 
-test('Calculator snapshot', () => {
-  const calculator = render(
-    <Calculator />,
-  );
-  const tree = calculator.container;
-  expect(tree).toMatchSnapshot();
-  expect(calculator.container).toHaveTextContent('AC');
+describe('Calculator', () => {
+ const calculator = render(<Calculator />)
+test('calculator is rendering',() => {
+    expect(prettyDOM(calculator.container)).toMatchSnapshot()
+});
+
 });
