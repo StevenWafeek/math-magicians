@@ -14,6 +14,16 @@ function Calculator() {
     setCalculatorData(calculate(calculatorData, buttonName));
   };
 
+  const isEqualsDisabled = () => {
+    if (calculatorData.next === null || calculatorData.operation === null) {
+      return true;
+    }
+    if (calculatorData.operation === '/' && calculatorData.next === '0') {
+      return true;
+    }
+    return false;
+  };
+
   return (
     <div className="calculator">
       <Display value={calculatorData.next || calculatorData.total || '0'} />
@@ -45,7 +55,7 @@ function Calculator() {
         <div className="row">
           <button type="button" className="zero" onClick={() => handleClick('0')}>0</button>
           <button type="button" className="button" onClick={() => handleClick('.')}>.</button>
-          <button type="button" className="button-operator" onClick={() => handleClick('=')}>=</button>
+          <button type="button" className="button-operator" onClick={() => handleClick('=')} disabled={isEqualsDisabled()}>=</button>
         </div>
       </div>
     </div>

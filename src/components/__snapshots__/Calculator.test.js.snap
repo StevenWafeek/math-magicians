@@ -142,6 +142,7 @@ exports[`Calculator calculator is rendering 1`] = `
         [36m</button>[39m
         [36m<button[39m
           [33mclass[39m=[32m\\"button-operator\\"[39m
+          [33mdisabled[39m=[32m\\"\\"[39m
           [33mtype[39m=[32m\\"button\\"[39m
         [36m>[39m
           [0m=[0m
