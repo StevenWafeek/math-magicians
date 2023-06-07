@@ -4,8 +4,8 @@ import '@testing-library/jest-dom/extend-expect';
 import { prettyDOM } from '@testing-library/dom';
 import Display from './chiled';
 
-describe('Calculator', () => {
-  const calculator = render(<Display />);
+describe('display', () => {
+  const calculator = render(<Display value="0" />);
   test('calculator is rendering', () => {
     expect(prettyDOM(calculator.container)).toMatchSnapshot();
   });
